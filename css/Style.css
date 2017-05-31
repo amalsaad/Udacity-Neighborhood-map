@@ -1,0 +1,54 @@
+﻿body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+
+.side-menu {
+    order: 1;
+    flex-grow: .4;
+    background-color: rgba(136, 136, 136, 0.33);
+}
+
+.map {
+    order: 2;
+    flex-grow: 4.6;
+    background-color: #fff;
+    text-align: center;
+    height: 1000px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.place {
+    margin: 7px;
+    padding: 7px;
+    list-style: none;
+    border-bottom: solid;
+    border-color: rgba(136, 136, 136, 0.49);
+}
+
+.search-box {
+    padding: 7px;
+    margin: 10px;
+    width: 70%;
+}
+
+@media screen and (max-width: 960px) {
+    .map {
+        flex-direction: column;
+    }
+
+    .side-menu {
+        width: 30%;
+        font-size: 8px;
+    }
+}

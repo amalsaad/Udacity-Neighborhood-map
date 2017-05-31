@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Airports Map</title>
+   
+    <link href="css/Style.css" rel="stylesheet" />
+    <script src='js/knockout-3.4.0.js'></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="side-menu">
+            <div class="search">
+                <input class="search-box" id="search-box" data-bind="textInput: searchIn, valueUpdate: 'keyup'" />
+            </div>
+            <ul class="list" data-bind="foreach: placeArray">
+                <li class="place" data-bind="text: name, click: bounce"></li>
+            </ul>
+        </div>
+
+        <div class="map" id="map"></div>
+    </div>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZxjsjYiD-hRauebkVMHAjmPiXTnKfChE&callback=initLocations&libraries=places" onerror="onError()"></script>
+</body>
+</html>
